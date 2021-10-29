@@ -39,7 +39,7 @@ Most people who use Dvorak probably use software (namely the OS) to implement th
 
 First I program the Dvorak keymap into level ``L0``. For most keys this works out fine, but ``z``, ``-_``, and ``/?`` are a problem. Since Dvorak touch typists will expect ``z`` to be where ``Right Shift`` is located, I reprogrammed ``Right Shift`` to be ``z``. (I tried to avoid doing this, but it's the only sane way. Your WPM will drop like a rock if you have to press a modifier key to type lower-case ``z``.) 
 
-We will also want easy access to ``/?``. I reprogrammed ``Del`` so it  maps to ``/?``. Dvorak touch typists will expect the key to be there. ``?`` is used so frequently that we shouldn't have to press three keys to access it. I never use the ``Del`` key, so this wasn't a significant loss for me.
+We will also want easy access to ``/?``. I reprogrammed ``Del`` so it  maps to ``/?``. Dvorak touch typists will expect the key to be there. ``?`` is used so frequently that we shouldn't have to press three keys to access it. I never use the ``Del`` key, so this wasn't a significant loss for me. To keep ``Del`` available for those who might miss it, I programmed in the keymapping ``Pn + Del`` = ``Del``
 
 Now that ``Right Shift`` is reprogrammed to ``z``, we have to create a ``Right Shift`` key. Dvorak touch typists will expect ``Right Shift`` to be in the default position for ``Fn1``. It is best to move ``Fn1`` elsewhere. I used the keypuller to swap ``Right Alt`` with ``Fn1``. I programmed all four of the keyboard's layers so the ``Fn1`` location is correct. Then in ``L0`` I reprogrammed the key with the ``Right Alt`` cap so it is the ``Right Shift``. In all other layers I reprogrammed it to be ``Right Alt``.
 
