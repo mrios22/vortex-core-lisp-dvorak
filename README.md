@@ -101,6 +101,8 @@ I chose to put these keys in the lower right corner because that is usually wher
  
 ## L3: The numeric keypad and arrow pad layer.
 
+![A Vortex CORE configuration for Dvorak, Emacs, and Lisp (L3)](https://github.com/mrios22/vortex-core-lisp-dvorak/blob/main/l3-number-pad.jpg?raw=true)
+
 Occasionally I need to enter data using a numeric keypad. I reprogrammed ``L3`` with a keypad on the left-hand-side. 
 
 I also added an arrow keypad. When in ``L3``, the arrow keys on keycaps ``ijkl`` work as if it is a normal arrow keypad. 
