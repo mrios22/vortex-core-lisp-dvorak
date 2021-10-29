@@ -13,15 +13,15 @@
  * Writing lisp programs.
  * Entering numbers quickly using a numeric keypad.
  
- This README explains my configuration and how you can copy it onto your board.
+ This README explains my configuration and how you can copy it onto your board. You can program it onto your board key by key using a MPC tool (recommended, so you learn about the setup) or you can upload my config file.
  
 ## Initial Configuration of a New CORE
  
 Before you start programming the keyboard you must install the new firmware. Using a Windows computer, go to the Vortex website, download the firmware ``.exe``, and install the ``CORE MPC`` option.
 
-Then go to [TcFreddie's Much Programming Core webpage](https://tsdo.in/much-programming-core/). We will be using it to configure the board.
+Then go to [TcFreddie's Much Programming Core webpage](https://tsdo.in/much-programming-core/). We will be using it to configure the board. (If you want to skip the programming and upload my configuration onto your board, skip to the last step.)
  
-## Guide to the Layers (and some design decisions) 
+## Guide to the Layers (and some design principles) 
 
 Layer ``L0`` will be the Dvorak/Emacs layer. 
 
@@ -31,23 +31,31 @@ Layer ``L2`` will be the same as ``L1`` until I figure out something better to d
 
 Layer ``L3`` will be a mapping with a numeric keypad, an arrow keypad, and a few other convenient things. 
  
+ When I was planning the keymapping, I followed three principles:
+ 
+* Keep the Dvorak keymapping as intact as possible for the alphabet and for normal English punctuation. 
+* If multiple keys need to be pressed, try to limit it to two keys. Avoid using the same hand to press multiple keys simultaneously. 
+* Use ``Fn``, ``Fn1``, and ``Pn`` to access frequently-used characters. Place these frequently-used characters on the home row if possible.
+ 
 ## Dvorak on the CORE
 
-This keyboard configuration assumes that you can touch type in Dvorak. Almost all of the keycaps will remain in their original position.
+This keyboard configuration assumes that you can touch type in Dvorak. Almost all of the keycaps will remain in their original position. 
 
-Most people who use Dvorak probably use software (namely the OS) to implement the keymapping rather than using a Dvorak keyboard. That won't work with the Vortex CORE. To get a comfortable Dvorak configuration, you have to reprogram the keys and move some keycaps around on the keyboard.
+Touch typing on the CORE is easier than it looks. The Vortex CORE does not have homing tabs on the ``F`` and ``J`` keys, but those keys are noticeably more concave than their neighbors. Your brain will eventually be able to notice the slight difference in concavity. After a few days, your index fingers will naturally return to the right place even if you can't see the keyboard.
 
-First I program the Dvorak keymap into level ``L0``. For most keys this works out fine, but ``z``, ``-_``, and ``/?`` are a problem. Since Dvorak touch typists will expect ``z`` to be where ``Right Shift`` is located, I reprogrammed ``Right Shift`` to be ``z``. (I tried to avoid doing this, but it's the only sane way. Your WPM will drop like a rock if you have to press a modifier key to type lower-case ``z``.) 
+To use Dvorak on the CORE, you have to reprogram the keyboard and move some keycaps around. Most people who use Dvorak probably use software (namely the OS) to implement the keymapping rather than using a Dvorak keyboard. That won't work with the Vortex CORE. If you do that, you won't have a ``z`` key.
 
-We will also want easy access to ``/?``. I reprogrammed ``Del`` so it  maps to ``/?``. Dvorak touch typists will expect the key to be there. ``?`` is used so frequently that we shouldn't have to press three keys to access it. I never use the ``Del`` key, so this wasn't a significant loss for me. To keep ``Del`` available for those who might miss it, I programmed in the keymapping ``Pn + Del`` = ``Del``
+Reprogram  ``L0``. With the Dvorak keys. For most keys this works out fine, but ``z``, ``-_``, and ``/?`` are a problem. Since Dvorak touch typists will expect ``z`` to be where ``Right Shift`` is located, I reprogrammed ``Right Shift`` to be ``z``. (I tried to avoid doing this, but it's the only sane way. Your WPM will drop like a rock if you have to press a modifier key to type lower-case ``z``.) 
 
 Now that ``Right Shift`` is reprogrammed to ``z``, we have to create a ``Right Shift`` key. Dvorak touch typists will expect ``Right Shift`` to be in the default position for ``Fn1``. It is best to move ``Fn1`` elsewhere. I used the keypuller to swap ``Right Alt`` with ``Fn1``. I programmed all four of the keyboard's layers so the ``Fn1`` location is correct. Then in ``L0`` I reprogrammed the key with the ``Right Alt`` cap so it is the ``Right Shift``. In all other layers I reprogrammed it to be ``Right Alt``.
 
-The final adjustment we need to make is to get easy access to the ``-_`` key. The ``-`` character is used so frequently in programming that it will be annoying to have to press ``Fn1 + ;`` to get it. I reprogrammed ``L0`` so pressing ``Pn + ;``will yield ``-``. With some practice, it becomes very easy to reach the thumb over to the ``Pn`` key when you need to type ``-``.
+We will also want easy access to ``/?``. I reprogrammed ``Delete`` so it  maps to ``/?``. Dvorak touch typists will expect the key to be there. ``?`` is used so frequently that we shouldn't have to press three keys to access it. I never use the ``Delete`` key, so this wasn't a significant loss for me. (To keep ``Delete`` available for those who might miss it, I programmed in the keymapping ``Pn + Delete`` = ``Delete`` .)
 
-One inconvenient aspect of this setup is that ``Fn1`` is not in a great location. It would have been better to place it to the right of the ``Space`` bar, but the position of ``Fn`` cannot be changed. I recommend that you train yourself not to use your thumb to press this ``Fn1``. Use your right ring finger instead. Your right thumb will get tired of reaching for this key.
+The final adjustment we need to make is to get easier access to the ``-_`` key. The ``-`` character is used so frequently in programming that it will be annoying to have to press ``Fn1 + ;`` to get it. That's a bad combo for a character that is used so frequently. To do that combination you need to either remove your fingers from the home row or press a key combination using the thumb and pinky of the right hand simultaneously (this will definitely cause cramps). To avoid the handstrain, I reprogrammed ``L0`` so pressing ``Pn + ;``will yield ``-``. With some practice, it becomes very easy to reach the thumb over to the ``Pn`` key when you need to type ``-``.
 
-After adopting this setup, I was able to get back up to my normal WPM within two days. The hardest part was getting used to the location of ``-``. 
+``Fn1`` is not in a great location. It would have been better to place it to the right of the ``Space`` bar, but the position of ``Fn`` cannot be changed. I recommend that you train yourself not to use your thumb to press this ``Fn1``. Use your right ring finger instead. Your right thumb will get tired of reaching for this key.
+
+After adopting this setup, I was able to get back up to my normal WPM within two days. The hardest part was getting used to the location of ``-``. It was also difficult to get used to using ``Fn1``. (Hint: writing a long article in Markdown is a good way to practice touch-typing special characters using ``Fn1``.)
 
 ## Emacs CORE
 
@@ -91,14 +99,13 @@ To program in Lisp and Clojure, you must have easy access to the symbols ``()[]{
 
 I chose to put these keys in the lower right corner because that is usually where the arrow keys are a keyboard. Lisp programmers will have a lot of muscle memory trained to find the arrow keys there.
  
- 
 ## L3: The numeric keypad and arrow pad layer.
 
 Occasionally I need to enter data using a numeric keypad. I reprogrammed ``L3`` with a keypad on the left-hand-side. 
 
 I also added an arrow keypad. When in ``L3``, the arrow keys on keycaps ``ijkl`` work as if it is a normal arrow keypad. 
 
-To get easy access to the arrows and numeric keypad, I programmed the ``Right Win`` button to serve as a toggle between ``L3`` and ``L0``. 
+To get easy access to the arrows and numeric keypad, I programmed the ``Right Win`` button to serve as a toggle between ``L3`` and ``L0``. If you are entering a number more than a few digits long, then it makes sense to toggle layers. If you will be using the arrow keys for a while, definitely toggle the layers. 
 
 ## Installing this keyboard configuration.
 
