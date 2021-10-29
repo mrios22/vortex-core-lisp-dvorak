@@ -19,6 +19,16 @@ Before you start programming the keyboard you must install the new firmware. Usi
 
 Then go to TcFreddie's Much Programming Core webpage. We will be using it to configure the board.
  
+## Guide to the Layers (and some design decisions) 
+
+Layer ``L0`` will be the Dvorak/Emacs layer. 
+
+Layer ``L1`` will be a vanilla layer: the keymappings will match what is printed on the keyboard. (Sometimes you need to hand your keyboard to someone else and you want them to be able to use it. Or sometimes you have to enter a complicated password and you don't want to touch type it.)
+
+Layer ``L2`` will be the same as ``L1`` until I figure out something better to do with it.
+
+Layer ``L3`` will be a mapping with a numeric keypad, an arrow keypad, and a few other convenient things. 
+ 
 ## Dvorak on the CORE
 
 This keyboard configuration assumes that you can touch type in Dvorak. Almost all of the keycaps will remain in their original position.
@@ -41,8 +51,51 @@ After adopting this setup, I was able to get back up to my normal WPM within two
 
 It is easy to reconfigure the CORE for Emacs. First, reprogram the ``Left Space`` bar as a ``Ctrl`` in layer ``L0``. It will take some time to get used to having the ``Ctrl`` in that location, but after you get used to it, it will save you a lot of fingerstrain.
 
-The next thing I did was to physically swap the locations of ``Esc`` and ``Left Alt`` (Meta). After one day of using Emacs on the CORE, I knew that the ``Left Alt`` key had to be moved. My left thumb was suffering from pressing the ``Left Alt`` key in that location. Placing the meta key in the upper left-hand corner was a far better choice. I reprogrammed layers ``L0-L2`` to match the physical key configuration of ``Esc`` and ``Left Alt``. The downside of making the keycap switch is that the `` `~`` key text is in the wrong location. 
-I reprogrammed the key so its function matches what is printed on it, but I kept the  `` `~`` key stored in the ``Fn1`` layer.
+The next thing I did was to physically swap the locations of ``Esc`` and ``Left Alt`` (Meta). After one day of using Emacs on the CORE, I knew that the ``Left Alt`` key had to be moved. My left thumb was suffering from pressing the ``Left Alt`` key in that location. Placing the meta key in the upper left-hand corner was a far better choice. I reprogrammed layers ``L0-L2`` to match the physical key configuration of ``Esc`` and ``Left Alt``. The downside of making the keycap switch is that the `` `~`` key text is in the wrong location. It looks incongruous with the rest of the board. 
+I reprogrammed the key so its function matches what is printed on it, but I kept the  `` `~`` key stored in the ``Fn1`` layer of the ``Left Alt`` keycap in the upper left corner of the keyboard.
 
 ## Lisp and Clojure Programming
+
+To program in Lisp and Clojure, you must have easy access to the symbols ``()[]{}-_"=+#%``. I reprogrammed the home row and ``zxcv`` keys of ``L0`` to give me easy access to these symbols. ``Left Shift`` has also been modified. To get access to these symbols, you need to press ``Fn`` or ``Pn``, depending on the side of the board that you are using. (The mappings are designed so you will use one finger from each hand to do the key combination rather than two fingers from the same hand.) This may make it easier to reach common programming symbols on the Vortex CORE than it is to reach them on your normal keyboard.
+
+(The left hand side of the equation shows which QWERTY keycaps to press.)
+
+ * ``Fn + a`` = ``{``
+ * ``Fn + s`` = ``}``
+ * ``Fn + d`` = ``[``
+ * ``Fn + f`` = ``]``
+ * ``Pn + j`` = ``*``
+ * ``Pn + k`` = ``(``
+ * ``Pn + l`` = ``)``
+ * ``Pn + ;`` = ``-``
+ * ``Pn + Enter`` = ``+``
+ * ``Fn + z`` = ``(``
+ * ``Fn1 + z`` = ``)``
+ * ``Fn + x`` = ``[``
+ * ``Fn1 + x`` = ``]``
+ * ``Fn + c`` = ``{``
+ * ``Fn1 + c`` = ``}``
+ * ``Fn + v`` = ``#``
+ * ``Fn1 + v`` = ``%``
+ * ``Fn + Tab`` = ``_``
+ * ``Fn + Left Shift`` = ``"``
+ 
+ To program these properly, you must use macros. The MPC tool makes it easy to create macros. Be sure to rearrange the order of the up and down strokes so two keys are held simultaneously rather pressed one after the other.
+ 
+ If you use Emacs to write lisp programs, you probably use smartparens mode or paredit mode. (If you don't, you should!) One of the best features of these modes is that you can move paretheses around to change scope. The Emacs command for moving paretheses around are ``Ctrl + (`` and ``Ctrl + )``. Entering these keyclicks is a nightmare even on my modified board. I created two macros for these commands.
+ 
+* ``Pn + Right Win`` = ``Ctrl + <-``
+* ``Pn + Right Ctrl`` = ``Ctrl + ->``
+
+I chose to put these keys in the lower right corner because that is usually where the arrow keys are a keyboard. Lisp programmers will have a lot of muscle memory trained to find the arrow keys there.
+ 
+ 
+## L3: The numeric keypad and arrow pad layer.
+
+Occasionally I need to enter data using a numeric keypad. I reprogrammed ``L3`` with a keypad on the left-hand-side. 
+
+I also added an arrow keypad. When in ``L3``, the arrow keys on keycaps ``ijkl`` work as if it is a normal arrow keypad. 
+
+To get easy access to the arrows and numeric keypad, I programmed the ``Right Win`` button to serve as a toggle between ``L3`` and ``L0``. 
+
 
