@@ -2,6 +2,8 @@
 
 ### Marc Rios (marcrios@fastmail.com)
 
+![A Vortex CORE configuration for Dvorak, Emacs, and Lisp](https://github.com/mrios22/vortex-core-lisp-dvorak/blob/main/vortex-dvorak-lisp.jpg?raw=true)
+
 ## Introduction
 
  I customized and reprogrammed my Vortex CORE 40 for the following:
