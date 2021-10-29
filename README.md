@@ -36,3 +36,13 @@ The final adjustment we need to make is to get easy access to the ``-_`` key. Th
 One inconvenient aspect of this setup is that ``Fn1`` is not in a great location. It would have been better to place it to the right of the ``Space`` bar, but the position of ``Fn`` cannot be changed. I recommend that you train yourself not to use your thumb to press this ``Fn1``. Use your right ring finger instead. Your right thumb will get tired of reaching for this key.
 
 After adopting this setup, I was able to get back up to my normal WPM within two days. The hardest part was getting used to the location of ``-``. 
+
+## Emacs CORE
+
+It is easy to reconfigure the CORE for Emacs. First, reprogram the ``Left Space`` bar as a ``Ctrl`` in layer ``L0``. It will take some time to get used to having the ``Ctrl`` in that location, but after you get used to it, it will save you a lot of fingerstrain.
+
+The next thing I did was to physically swap the locations of ``Esc`` and ``Left Alt`` (Meta). After one day of using Emacs on the CORE, I knew that the ``Left Alt`` key had to be moved. My left thumb was suffering from pressing the ``Left Alt`` key in that location. Placing the meta key in the upper left-hand corner was a far better choice. I reprogrammed layers ``L0-L2`` to match the physical key configuration of ``Esc`` and ``Left Alt``. The downside of making the keycap switch is that the `` `~`` key text is in the wrong location. 
+I reprogrammed the key so its function matches what is printed on it, but I kept the  `` `~`` key stored in the ``Fn1`` layer.
+
+## Lisp and Clojure Programming
+
