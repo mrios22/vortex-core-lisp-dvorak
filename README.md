@@ -17,7 +17,7 @@
  
 Before you start programming the keyboard you must install the new firmware. Using a Windows computer, go to the Vortex website, download the firmware ``.exe``, and install the ``CORE MPC`` option.
 
-Then go to TcFreddie's Much Programming Core webpage. We will be using it to configure the board.
+Then go to [TcFreddie's Much Programming Core webpage](https://tsdo.in/much-programming-core/). We will be using it to configure the board.
  
 ## Guide to the Layers (and some design decisions) 
 
@@ -98,4 +98,6 @@ I also added an arrow keypad. When in ``L3``, the arrow keys on keycaps ``ijkl``
 
 To get easy access to the arrows and numeric keypad, I programmed the ``Right Win`` button to serve as a toggle between ``L3`` and ``L0``. 
 
+## Installing this keyboard configuration.
 
+If you would like to copy my configuration rather than programming it in yourself, you can download ``vortex-core-dvorak.json`` from this repository and then upload it into TcFreddie's MPC webpage. Download the binary code from the webpage. Unplug your keyboard, hold down the ``Fn + d`` keycaps, and plug the board back in. Your OS should recognize the keyboard as a storage device. Delete the file on that storage device and replace it with the binary file you downloaded from the MPC page. Eject the drive. Disconnect and then reconnect the keyboard. Your keyboard should now be programmed with my configuration. 
