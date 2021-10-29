@@ -13,7 +13,7 @@
  * Writing lisp programs.
  * Entering numbers quickly using a numeric keypad.
  
- This README explains my configuration and how you can copy it on your board.
+ This README explains my configuration and how you can copy it onto your board.
  
 ## Initial Configuration of a New CORE
  
@@ -102,4 +102,4 @@ To get easy access to the arrows and numeric keypad, I programmed the ``Right Wi
 
 ## Installing this keyboard configuration.
 
-If you would like to copy my configuration rather than programming it in yourself, you can download ``vortex-core-dvorak.json`` from this repository and then upload it into TcFreddie's MPC webpage. Download the binary code from the webpage. Unplug your keyboard, hold down the ``Fn + d`` keycaps, and plug the board back in. Your OS should recognize the keyboard as a storage device. Delete the file on that storage device and replace it with the binary file you downloaded from the MPC page. Eject the drive. Disconnect and then reconnect the keyboard. Your keyboard should now be programm= +    ed with my configuration. 
+If you would like to copy my configuration rather than programming it in yourself, you can download ``vortex-core-dvorak.json`` from this repository and then upload it into TcFreddie's MPC webpage. Download the binary code from the webpage. Unplug your keyboard, hold down the ``Fn + d`` keycaps, and plug the board back in. Your OS should recognize the keyboard as a storage device. Delete the file on that storage device and replace it with the binary file you downloaded from the MPC page. Eject the drive. Disconnect and then reconnect the keyboard. Your keyboard should now be programmed with my configuration. 
