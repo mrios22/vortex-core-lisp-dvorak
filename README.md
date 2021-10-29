@@ -17,7 +17,7 @@
  
 ## Initial Configuration of a New CORE
  
-Before you start programming the keyboard you must install the new firmware. Using a Windows computer, go to the Vortex website, download the firmware ``.exe``, and install the ``CORE MPC`` option.
+Before you start programming the keyboard you must install the new [firmware]{http://www.vortexgear.tw/vortex3.asp). Using a Windows computer, go to the Vortex website, download the firmware ``.exe``, and install the ``CORE MPC`` option.
 
 Then go to [TcFreddie's Much Programming Core webpage](https://tsdo.in/much-programming-core/). We will be using it to configure the board. (If you want to skip the programming and upload my configuration onto your board, skip to the last step.)
  
