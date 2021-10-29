@@ -1,6 +1,6 @@
 # A Vortex CORE configuration for Dvorak, Emacs, and Lisp Programming
 
-### Marc Rios (marcrios@fastmail.com)
+### Marc Rios
 
 ![A Vortex CORE configuration for Dvorak, Emacs, and Lisp](https://github.com/mrios22/vortex-core-lisp-dvorak/blob/main/vortex-dvorak-lisp.jpg?raw=true)
 
